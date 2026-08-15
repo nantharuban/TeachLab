@@ -1,0 +1,2 @@
+node_id,title,memory_badge,think_prompt,definition,description,key_points,interaction_instruction,quick_check,answer,image_description
+U02_SU01_01,ඒකකය 02 ව්‍යුහ පරීක්ෂණය,ව්‍යුහ පරීක්ෂණය,කේත වෙනස්කම් නැතිව එකම renderer එකට සම්පූර්ණයෙන්ම නව ඉහළ මට්ටමේ ඒකකයක් පූරණය කළ හැකිද?,මෙම දර්ශනය පෙනේ නම් නැවත භාවිත කළ හැකි Unit -> Subunit -> Scene පූරණකය ක්‍රියා කරයි.,මෙය ව්‍යුහ පරීක්ෂණ අන්තර්ගතය පමණි. නව ඉහළ මට්ටමේ ඒකකයක් CSV දත්තයෙන් පූරණය වන බව තහවුරු කරයි.,නැවත භාවිත කළ හැකි පූරණකය|CSV ලේඛනය|කේතයේ ස්ථිර ඒකකයක් නැත,,මෙම ඒකකය registry සහ CSV දත්තයෙන් පමණක් පූරණය වූවාද?,ඔව්.,

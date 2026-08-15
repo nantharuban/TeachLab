@@ -1,0 +1,9 @@
+subunit_id,title,folder,display_order,enabled
+SU01,Introduction to Coordination,SU01_introduction_coordination,1,1
+SU02,Nervous System as a System,SU02_nervous_system_as_system,2,1
+SU03,Neuron,SU03_neuron,3,1
+SU04,Organization of the Nervous System,SU04_nervous_system_organization,4,1
+SU05,Human Brain,SU05_human_brain,5,1
+SU06,Spinal Cord,SU06_spinal_cord,6,1
+SU07,Reflex Action,SU07_reflex_action,7,1
+SU08,Autonomic Nervous System,SU08_autonomic_nervous_system,8,1

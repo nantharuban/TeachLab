@@ -1,0 +1,106 @@
+node_id,parent_id,node_type,title,level,display_order
+U01,,unit,Coordination and Homeostasis,1,1
+TU01,U01,teachable_unit,Teachable Unit 01 — Introduction to Coordination,2,1
+TU01_01,TU01,topic,Why coordination is needed,3,1
+TU01_02,TU01,topic,Stimulus,3,2
+TU01_03,TU01,topic,Receptor / sensory organ,3,3
+TU01_04,TU01,topic,Response,3,4
+TU01_05,TU01,topic,Effector,3,5
+TU01_06,TU01,topic,Input → Process → Output,3,6
+TU01_07,TU01,topic,Whole-system idea: Stimulus → Receptor → Coordinator → Effector → Response,3,7
+TU01_08,TU01,topic,Two coordinating systems,3,8
+TU01_08_01,TU01_08,subtopic,Nervous system,4,1
+TU01_08_02,TU01_08,subtopic,Endocrine system,4,2
+NC,U01,section,Nervous Coordination,2,2
+TU02,NC,teachable_unit,Teachable Unit 02 — Nervous System as a System,3,1
+TU02_01,TU02,topic,Need / role of the nervous system,4,1
+TU02_02,TU02,topic,Nervous system as an information-processing system,4,2
+TU02_03,TU02,topic,Input → Processing → Output,4,3
+TU02_04,TU02,topic,Overall flow: receptor → nervous system → effector,4,4
+TU03,NC,teachable_unit,Teachable Unit 03 — Neuron,3,2
+TU03_01,TU03,topic,Neuron as the structural unit of the nervous system,4,1
+TU03_02,TU03,topic,Main parts of a neuron,4,2
+TU03_03,TU03,topic,Structure ↔ function relationship,4,3
+TU03_04,TU03,topic,Three neuron types,4,4
+TU03_04_01,TU03_04,subtopic,Sensory neuron,5,1
+TU03_04_02,TU03_04,subtopic,Motor neuron,5,2
+TU03_04_03,TU03_04,subtopic,Interneuron,5,3
+TU03_05,TU03,topic,Role of each neuron type,4,5
+TU03_06,TU03,topic,Comparison of the three neuron types,4,6
+TU04,NC,teachable_unit,Teachable Unit 04 — Organization of the Nervous System,3,3
+TU04_01,TU04,topic,Two main divisions,4,1
+TU04_01_01,TU04_01,subtopic,Central nervous system — CNS,5,1
+TU04_01_02,TU04_01,subtopic,Peripheral nervous system — PNS,5,2
+TU04_02,TU04,topic,CNS,4,2
+TU04_02_01,TU04_02,subtopic,Brain,5,1
+TU04_02_02,TU04_02,subtopic,Spinal cord,5,2
+TU04_03,TU04,topic,PNS,4,3
+TU04_03_01,TU04_03,subtopic,Cranial nerves — 12 pairs,5,1
+TU04_03_02,TU04_03,subtopic,Spinal nerves — 31 pairs,5,2
+TU04_04,TU04,topic,Overall organization map of the nervous system,4,4
+TU05,NC,teachable_unit,Teachable Unit 05 — Human Brain,3,4
+TU05_01,TU05,topic,Brain as a Whole,4,1
+TU05_01_01,TU05_01,subtopic,Location / overall position,5,1
+TU05_01_02,TU05_01,subtopic,Protection of the brain,5,2
+TU05_01_03,TU05_01,subtopic,Main structural organization,5,3
+TU05_01_04,TU05_01,subtopic,Three main parts,5,4
+TU05_01_04_01,TU05_01_04,item,Cerebrum,6,1
+TU05_01_04_02,TU05_01_04,item,Cerebellum,6,2
+TU05_01_04_03,TU05_01_04,item,Medulla oblongata,6,3
+TU05_02,TU05,topic,Cerebrum,4,2
+TU05_02_01,TU05_02,subtopic,Location,5,1
+TU05_02_02,TU05_02,subtopic,Structure,5,2
+TU05_02_03,TU05_02,subtopic,Function,5,3
+TU05_03,TU05,topic,Cerebellum,4,3
+TU05_03_01,TU05_03,subtopic,Location,5,1
+TU05_03_02,TU05_03,subtopic,Structure,5,2
+TU05_03_03,TU05_03,subtopic,Function,5,3
+TU05_04,TU05,topic,Medulla Oblongata,4,4
+TU05_04_01,TU05_04,subtopic,Location,5,1
+TU05_04_02,TU05_04,subtopic,Structure,5,2
+TU05_04_03,TU05_04,subtopic,Function,5,3
+TU05_05,TU05,topic,Comparison of the Three Main Brain Parts,4,5
+TU05_05_01,TU05_05,subtopic,Cerebrum vs Cerebellum vs Medulla oblongata,5,1
+TU05_05_02,TU05_05,subtopic,Location,5,2
+TU05_05_03,TU05_05,subtopic,Structural features,5,3
+TU05_05_04,TU05_05,subtopic,Main functions,5,4
+TU06,NC,teachable_unit,Teachable Unit 06 — Spinal Cord,3,5
+TU06_01,TU06,topic,Location,4,1
+TU06_02,TU06,topic,Relationship with the medulla oblongata,4,2
+TU06_03,TU06,topic,Relationship with the vertebral column,4,3
+TU06_04,TU06,topic,Protection,4,4
+TU06_05,TU06,topic,Cross-section of the spinal cord,4,5
+TU06_06,TU06,topic,White matter,4,6
+TU06_07,TU06,topic,Grey matter,4,7
+TU06_08,TU06,topic,Central canal,4,8
+TU06_09,TU06,topic,Spinal nerves,4,9
+TU07,NC,teachable_unit,Teachable Unit 07 — Reflex Action,3,6
+TU07_01,TU07,topic,Why rapid protective responses are needed,4,1
+TU07_02,TU07,topic,Meaning of reflex action,4,2
+TU07_03,TU07,topic,Reflex arc as the functional unit of the nervous system,4,3
+TU07_04,TU07,topic,Reflex pathway,4,4
+TU07_04_01,TU07_04,subtopic,Stimulus,5,1
+TU07_04_02,TU07_04,subtopic,Receptor,5,2
+TU07_04_03,TU07_04,subtopic,Sensory neuron,5,3
+TU07_04_04,TU07_04,subtopic,Interneuron,5,4
+TU07_04_05,TU07_04,subtopic,Motor neuron,5,5
+TU07_04_06,TU07_04,subtopic,Effector,5,6
+TU07_04_07,TU07_04,subtopic,Response,5,7
+TU07_05,TU07,topic,Structural unit vs functional unit,4,5
+TU07_05_01,TU07_05,subtopic,Neuron = structural unit,5,1
+TU07_05_02,TU07_05,subtopic,Reflex arc = functional unit,5,2
+TU07_06,TU07,topic,Types of reflex actions,4,6
+TU07_06_01,TU07_06,subtopic,Spinal reflexes,5,1
+TU07_06_02,TU07_06,subtopic,Cranial reflexes,5,2
+TU07_07,TU07,topic,Examples and comparison,4,7
+TU08,NC,teachable_unit,Teachable Unit 08 — Autonomic Nervous System,3,7
+TU08_01,TU08,topic,Need for involuntary control,4,1
+TU08_02,TU08,topic,Internal organs controlled by the autonomic nervous system,4,2
+TU08_03,TU08,topic,Coordinating centres,4,3
+TU08_04,TU08,topic,Two divisions,4,4
+TU08_04_01,TU08_04,subtopic,Sympathetic nervous system,5,1
+TU08_04_02,TU08_04,subtopic,Parasympathetic nervous system,5,2
+TU08_05,TU08,topic,Sympathetic system and fight-or-flight response,4,5
+TU08_06,TU08,topic,Parasympathetic system and restoration toward normal state,4,6
+TU08_07,TU08,topic,Opposite effects of the two systems,4,7
+TU08_08,TU08,topic,Comparison of sympathetic and parasympathetic responses,4,8

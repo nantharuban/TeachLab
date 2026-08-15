@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Teaching Core — Nervous Coordination</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="topbar-brand">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22">
+        <circle cx="5" cy="12" r="2.4" fill="currentColor"/>
+        <circle cx="19" cy="6" r="2.4" fill="currentColor"/>
+        <circle cx="19" cy="18" r="2.4" fill="currentColor"/>
+        <line x1="7" y1="12" x2="17" y2="6.3" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="7" y1="12" x2="17" y2="17.7" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+    </span>
+    <div class="brand-text">
+      <span class="brand-title">Teach Lab</span>
+      <span class="brand-subtitle">Nervous Coordination</span>
+    </div>
+  </div>
+  <div class="topbar-actions presentation-controls">
+    <select id="languageSelect" class="language-select" aria-label="Select language">
+      <option value="en">EN</option>
+      <option value="ta">தமிழ்</option>
+      <option value="si">සිං</option>
+    </select>
+    <button id="focusModeBtn" class="focus-mode-btn" type="button">Enter Focus</button>
+    <button id="componentToggleBtn" class="component-toggle-btn" type="button" aria-expanded="false">View</button>
+  </div>
+</header>
+
+<div class="app-shell">
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">Lesson Map</div>
+    <div id="unitMenuWrap" class="unit-menu-wrap">
+      <div id="unitMenu" class="unit-menu" aria-label="Unit menu"></div>
+      <div id="subunitMenu" class="unit-menu" aria-label="Subunit menu"></div>
+    </div>
+  </aside>
+
+  <div class="scrim" id="scrim"></div>
+
+  <main id="mainScroll" class="main-scroll">
+    <div class="breadcrumb">
+      <span id="crumbSection"></span>
+    </div>
+
+    <section id="unitLoaderPanel" class="unit-loader-panel"></section>
+    <section id="sceneMain" class="scene-main"></section>
+    <section id="editPanel" class="edit-panel hidden"></section>
+  </main>
+
+</div>
+
+<footer class="bottom-nav">
+  <button id="navPrev" class="nav-btn">← Previous</button>
+  <button id="navUp" class="nav-btn">↑ Up</button>
+  <button id="navDeep" class="nav-btn nav-btn-accent">Go Deep ↓</button>
+  <button id="navNext" class="nav-btn">Next →</button>
+</footer>
+
+<div id="componentMenu" class="component-menu hidden" role="menu" aria-label="Component visibility controls"></div>
+<button id="exitFocusBtn" class="focus-mode-btn exit-focus-btn hidden" type="button">Exit Focus</button>
+
+<div id="mindMapPanel" class="mindmap-overlay hidden">
+  <div class="mindmap-panel">
+    <div class="mindmap-panel-header">
+      <h2>Lesson Mind Map</h2>
+      <button id="mindMapClose" class="btn btn-ghost">Close</button>
+    </div>
+    <div class="mindmap-panel-body"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
