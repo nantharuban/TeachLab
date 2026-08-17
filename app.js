@@ -776,7 +776,7 @@ const UnitLoader = {
     frame.dataset.componentKey = "visual";
 
     let rendered = false;
-    let videoElement = null;
+    let videoControls = null;
     let hasAttemptedMedia = false;
 
     images.forEach(imagePath => {
@@ -787,6 +787,7 @@ const UnitLoader = {
       placeholder.innerHTML = '<div class="ph-icon">◇</div><div class="ph-label">' + this.escapeHtml(this.t("mediaUnavailable")) + '</div>' + (description ? '<div class="ph-description">' + this.escapeHtml(description) + '</div>' : '') + '<div class="ph-expected">Expected: ' + this.escapeHtml(resolvedPath) + '</div>';
 
       let media;
+      let controls = null;
       if (mediaType === "video") {
         media = document.createElement("video");
         media.className = "scene-media-video";
@@ -796,6 +797,10 @@ const UnitLoader = {
         media.playsInline = true;
         media.preload = "metadata";
         media.controls = false;
+        controls = this.buildVideoControls(media);
+        controls.dataset.componentKey = "visual";
+        controls.classList.add("hidden");
+        if (!videoControls) videoControls = controls;
       } else {
         media = document.createElement("img");
         media.className = "scene-visual-image";
@@ -811,14 +816,16 @@ const UnitLoader = {
         if (success) {
           media.classList.remove("hidden");
           placeholder.classList.add("hidden");
+          if (controls) controls.classList.remove("hidden");
           rendered = true;
-          if (mediaType === "video") {
-            videoElement = media;
-          }
           return;
         }
 
         media.remove();
+        if (controls) {
+          controls.remove();
+          if (videoControls === controls) videoControls = null;
+        }
         placeholder.classList.remove("hidden");
         rendered = true;
       };
@@ -827,9 +834,7 @@ const UnitLoader = {
         if (mediaType === "video") {
           if (media.readyState >= 2) {
             settle(true);
-            return;
           }
-          settle(false);
           return;
         }
 
@@ -879,10 +884,8 @@ const UnitLoader = {
 
     content.appendChild(frame);
 
-    if (videoElement) {
-      const controls = this.buildVideoControls(videoElement);
-      controls.dataset.componentKey = "visual";
-      content.appendChild(controls);
+    if (videoControls && videoControls.isConnected === false) {
+      content.appendChild(videoControls);
     }
 
     return true;
@@ -1230,9 +1233,26 @@ function bindShellControls() {
   }
 
   if (componentToggleBtn && componentMenu) {
+    const closeComponentMenu = () => {
+      componentMenu.classList.add("hidden");
+      componentToggleBtn.setAttribute("aria-expanded", "false");
+    };
+
     componentToggleBtn.addEventListener("click", () => {
-      const isHidden = componentMenu.classList.toggle("hidden");
-      componentToggleBtn.setAttribute("aria-expanded", String(!isHidden));
+      const shouldOpen = componentMenu.classList.contains("hidden");
+      componentMenu.classList.toggle("hidden", !shouldOpen);
+      componentToggleBtn.setAttribute("aria-expanded", String(shouldOpen));
+    });
+
+    document.addEventListener("click", event => {
+      if (componentMenu.classList.contains("hidden")) return;
+      const target = event.target;
+      if (componentMenu.contains(target) || componentToggleBtn.contains(target)) return;
+      closeComponentMenu();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeComponentMenu();
     });
   }
 

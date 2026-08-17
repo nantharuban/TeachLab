@@ -1408,3 +1408,36 @@ body.focus-mode .bottom-nav {
 @media (max-width: 420px) {
   .brand-subtitle { display: none; }
 }
+
+@media (max-width: 640px) {
+  :root {
+    --bottom-nav-height: 124px;
+  }
+
+  .component-menu {
+    right: 12px;
+    width: min(90vw, 220px);
+    min-width: 0;
+    max-width: calc(100vw - 24px);
+  }
+
+  .main-scroll {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--bottom-nav-gap) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .bottom-nav,
+  body.focus-mode .bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(46px, auto));
+    gap: 8px;
+    height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .nav-btn {
+    min-width: 0;
+    width: 100%;
+    min-height: 46px;
+  }
+}
