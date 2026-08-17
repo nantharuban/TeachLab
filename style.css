@@ -8,6 +8,29 @@
 :root {
   --bottom-nav-height: 76px;
   --bottom-nav-gap: 16px;
+  --topbar-height: 60px;
+  --media-fit-breadcrumb-space: 36px;
+  --media-fit-title-space: 56px;
+  --media-fit-reserved-height: calc(
+    var(--topbar-height) +
+    22px +
+    var(--media-fit-breadcrumb-space) +
+    26px +
+    var(--media-fit-title-space) +
+    var(--bottom-nav-height) +
+    var(--bottom-nav-gap)
+  );
+  --media-fit-focus-title-space: 46px;
+  --media-fit-focus-controls-space: 32px;
+  --media-fit-focus-bottom-gap: 8px;
+  --media-fit-focus-reserved-height: calc(
+    8px +
+    var(--media-fit-focus-title-space) +
+    var(--media-fit-focus-controls-space) +
+    var(--bottom-nav-height) +
+    var(--media-fit-focus-bottom-gap)
+  );
+  --focus-presentation-column-width: 1180px;
   --bg: #F3F4F7;
   --bg-panel: #EAECF1;
   --card: #FFFFFF;
@@ -91,7 +114,17 @@ body.focus-mode .unit-loader-content {
   border: none;
   border-radius: 0;
   box-shadow: none;
+  width: min(100%, var(--focus-presentation-column-width));
+  margin-inline: auto;
   padding: 0;
+}
+
+body.focus-mode .breadcrumb {
+  display: none;
+}
+
+body.focus-mode .scene-title {
+  margin-bottom: 12px;
 }
 
 body.focus-mode .scene-main {
@@ -316,6 +349,26 @@ button {
   border-radius: 12px;
   border: 1px solid #D8E5F2;
   overflow: hidden;
+}
+
+@media (min-width: 641px) {
+  .scene-image-frame {
+    width: min(100%, calc((100vh - var(--media-fit-reserved-height)) * 16 / 9));
+    width: min(100%, calc((100dvh - var(--media-fit-reserved-height)) * 16 / 9));
+    margin-inline: auto;
+  }
+
+  body.focus-mode .scene-image-frame {
+    width: min(100%, calc((100vh - var(--media-fit-focus-reserved-height)) * 16 / 9));
+    width: min(100%, calc((100dvh - var(--media-fit-focus-reserved-height)) * 16 / 9));
+  }
+
+  body.focus-mode .media-controls {
+    width: min(100%, calc((100vh - var(--media-fit-focus-reserved-height)) * 16 / 9));
+    width: min(100%, calc((100dvh - var(--media-fit-focus-reserved-height)) * 16 / 9));
+    margin-inline: auto;
+    margin-top: 8px;
+  }
 }
 
 .scene-visual-image,
